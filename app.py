@@ -17,3 +17,12 @@ model = genai.GenerativeModel('gemini-pro')
 def get_response(question):
     response = model.generate_content(question)
     return response.text
+
+
+#streamlit app
+
+st.set_page_config(page_title="Demo Application", page_icon=":rocket:")
+st.header("Gemini Pro Demo Application")
+
+input=st.text_input("Input", key="input")
+submit=st.button("Ask the question", key="ask")
